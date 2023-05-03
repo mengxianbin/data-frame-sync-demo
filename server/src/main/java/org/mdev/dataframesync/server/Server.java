@@ -17,14 +17,18 @@ public class Server {
 
         new Thread(() -> {
             while (true) {
+                System.out.println();
+
                 try {
-                    Thread.sleep(40);
+                    Thread.sleep(800);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
 
                 network.update();
                 network.send(new Message(ProtocolType.SC_Frame.getId(), new SCProtocolFrame()));
+
+                System.out.println();
             }
         }).start();
 

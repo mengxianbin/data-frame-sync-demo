@@ -9,8 +9,9 @@ import java.util.Queue;
 
 public class ServerNetwork {
 
+    @SuppressWarnings("unused")
     public void send(Message message) {
-        VirtualNetwork.SERVER_CLIENT_MESSAGE_QUEUE.add(message);
+        // VirtualNetwork.SERVER_CLIENT_MESSAGE_QUEUE.add(message);
     }
 
     public void update() {
